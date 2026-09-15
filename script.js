@@ -10,5 +10,12 @@ fs.writerFileSync('student.txt', 'Name: Siddhant\nSubject: Full Stack Developmen
 
 console.log('File cretaed Succesfully');
 
+//update
+
+fs.appendFileSync('student.txt', '\nExperiment 2 completed.');
+console.log('File updated');
+
+console.log(data);
+
 
 
