@@ -12,6 +12,14 @@ const server = http.createServer((req, res) => {
     else if(req.method === 'PUT' && req.url === '/students/101') {
         res.statusCode = 200; res.end('PUT: Student updated');
     }
+     else if(req.method === 'PATCH' && req.url === '/students/101') {
+        res.statusCode = 200; res.end('PATCH: Student updated');
+    }
+     else if(req.method === 'HEAD' && req.url === '/students/101') {
+        res.statusCode = 200; res.end('HEAD: Student information');
+    }
+
+    
     else if(req.method === 'DELETE' && req.url === '/students/101') {
         res.statusCode = 200; res.end('DELETE: Student deleted');
     } else {
@@ -19,4 +27,4 @@ const server = http.createServer((req, res) => {
     }
 
 });
-server.listen(3000, () => console.log('Server on 3000'));
+server.listen(2300, () => console.log('Server on 2300'));
